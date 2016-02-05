@@ -7,8 +7,11 @@
 //
 
 #import "DemoViewController.h"
-
-@interface DemoViewController ()
+#import "ShowViewController.h"
+@interface DemoViewController ()<WWPageControllerDataSource,WWPageControllerDelegate>{
+    
+    NSArray *data;
+}
 
 @end
 
@@ -16,9 +19,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
+    data = [UIFont familyNames];
+    self.dataSource = self;
+    self.delegate = self;
+    self.titleTabColor = [UIColor colorWithRed:0.000 green:0.532 blue:1.000 alpha:1.000];
+}
+- (NSInteger )numberOfPages{
+    
+    return data.count;
+}
+- (NSString *)pageTitle:(NSInteger)page{
+    
+    
+    return data[page];
+    
+    
+}
+- (UIViewController *)controllerOfPage:(NSInteger)page{
+    
+    ShowViewController *show = [[ShowViewController alloc]init];
+    show.pageTitle = [NSString stringWithFormat:@"第%ld页",page];
+    return show;
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#define KTextFont 16
 @interface TitleCell : UICollectionViewCell
-
+@property (nonatomic,strong,readonly)UILabel *titleLabel;
+@property (nonatomic,copy)NSString *title;
+@property (nonatomic,assign)BOOL isSelected;
 @end

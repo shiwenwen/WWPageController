@@ -13,4 +13,5 @@
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KTabBarHeight 49
 #define KNavigationBarHeight 64
+#define proportation  (KScreenWidth / 375)
 #endif /* UICommons_h */
