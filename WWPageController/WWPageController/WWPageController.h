@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WWPageController.h
 //  WWPageController
 //
 //  Created by 石文文 on 16/2/4.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface WWPageController : UIViewController
 
 @end
-
