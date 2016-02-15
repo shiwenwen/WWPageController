@@ -42,7 +42,7 @@
     _isSelected = isSelected;
     
     if (_isSelected) {
-        _titleLabel.font = [UIFont boldSystemFontOfSize:KTextFont + 3];
+        _titleLabel.font = [UIFont boldSystemFontOfSize:KTextFont + 4];
         
     }else{
         _titleLabel.font = [UIFont systemFontOfSize:KTextFont];

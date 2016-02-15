@@ -24,8 +24,13 @@
     self.dataSource = self;
     self.delegate = self;
     self.titleTabColor = [UIColor colorWithRed:0.000 green:0.532 blue:1.000 alpha:1.000];
+    
 }
-- (NSInteger )numberOfPages{
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    
+    return UIStatusBarStyleLightContent;
+}
+-(NSInteger )numberOfPages{
     
     return data.count;
 }

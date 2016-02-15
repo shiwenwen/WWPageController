@@ -133,6 +133,7 @@ static NSString *identifier = @"title_cell";
     if (self.delegate) {
         
         
+        
     }
     
     
@@ -159,7 +160,7 @@ static NSString *identifier = @"title_cell";
     CGSize size;
     if ([_selected[indexPath.item]boolValue] == YES) {
         
-        size = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:KTextFont + 3]}];
+        size = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:KTextFont + 4]}];
     }else{
         
        size = [title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:KTextFont]}];
